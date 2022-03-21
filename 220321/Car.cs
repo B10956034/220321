@@ -22,5 +22,10 @@ namespace _220321
             Console.WriteLine("品牌是：" + brand);
         }
 
+        public virtual void opendoor()
+        {
+            Console.WriteLine("側門打開");
+        }
+
     }
 }
