@@ -29,9 +29,10 @@ namespace _220321
 
             //猜數字
             int num = myRandom(1, 100); //68
+            int min = 1, max = 100;
             for (int i = 1; i <= 5; i++)
             {
-                int min = 1, max = 100;
+                
                 Console.WriteLine("輸入數字(1~100)");
                 int input;
                 input = int.Parse(Console.ReadLine());
@@ -39,25 +40,29 @@ namespace _220321
                 if (input == num)
                 {
                     Console.WriteLine("答對了");
+                    break;
                 }
                 //91
-                if (input > num)
+                else if (input > num)
                 {
                     //1-91
                     max = input;
-                    Console.WriteLine("答錯了，數字介於" + min + "~" + input);
-
+                    Console.WriteLine("答錯了，數字介於" + min + "~" + max);
+                    continue;
                 }
                 //47
-                if (input < num)
+                else if (input < num)
                 {
                     min = input;
-                    Console.WriteLine("答錯了，數字介於" + input + "~" + max);
-
+                    Console.WriteLine("答錯了，數字介於" + min + "~" + max);
+                    continue;
                 }
                 
 
             }
+
+
+            
         }
 
 
